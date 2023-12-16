@@ -1,0 +1,190 @@
+git token generated on 9 december 2023: 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
+
+
+Git : It is a free an open source version control system .
+Version control: Version control  also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.
+
+
+
+HOW TO CONFIGURE THE GIT :
+1>git --version
+2>git config --global user.name "your_username"
+3>git config --global user.email "your_email"
+
+
+GitHub: GitHub is an online hosting website where we host all of our git repositories.
+
+TO ADD FILES IN GITHUB:
+1>git add . => it basically add all files of that folder to the git .
+2> git add about.txt => it basically adds this about.txt file to the git or if we do git add then git basically tracks the files and make it in staging area.
+3> git commit -m "first commit" : it basically tells that the files that are in staged state are now ready to be committed (ie ready to take the snap shot or to save those changes taken in the proje ct .)
+
+
+FLOW DIAGRAM : 
+SOMES CHANGES DONE IN OUR PROJECT  -> GIT ADD FILENAME OR GIT ADD . (TO MAKE IT IN STAGING AREA ) -> GIT COMMIT -M "MESSSAGE" (TO SAVE THOSE CHANGES IN OUR GITHUB  OR IT TAKE THE SNAP SHOT OF THAT PARTICULAR FILE AT THAT PARTICULAR TIME.) 
+ 
+TYPICAL GIT WORKFLOW DIAGRAM: 
+					1)MAKING CHANGES
+					2)STAGING CHANGES 
+					3)COMMITING CHANGES
+					
+git commands:
+add->To Track your files and the changes  done in file  we use git add  command .
+commit >To Save those chanegs we make in our code  we use  git commit .
+push > once we have made the changes locally in our  computer  and we are ready to put them in github we use git push command .
+
+pull > To download the changes from remote repo to our local machine ,  then we use pull command (the opposite of push ).
+
+
+
+To create a new repository on the command line .
+follow  these processors :
+		  git init
+		  git add README.md
+		  git commit -m "first commit"
+		  git branch -M main
+		  git remote add origin https://github.com/Shubh-Vishwa/demo-repo.git
+		  git push -u origin main
+		  
+		  
+To  push an existing repository from the command line
+		  git remote add origin https://github.com/Shubh-Vishwa/demo-repo.git
+		  git branch -M main
+		  git push -u origin main
+		  
+git pull :  it updates your current local working branch,
+
+NOTES: 
+To see the all files in terminal including the hidden files we use this command =>  ls -la 
+SSH :It is a network protocol that allows one computer to securely connect to anothern computer over an unsecured network like the internet  without encryption data travells over the web and palin text 
+
+
+
+
+
+
+SSH : 
+GO TO GITHUB AND THEN CLICK ON YOUR PROFILE PHOTO 
+GO TO SETTING 
+GO TO SSH and GPG keys
+AND NOW CLICK  ON ADD NEW SSH KEY
+TO FILL THIS GO this link: 
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Push the repository to GitHub: OR TO CONNECT TO ANOTHER PROVIDED GITHUB 
+git remote add origin https://github.com/ihechikara/git-and-github-tutorial.git
+git branch -M main
+git push -u origin main
+NOTE:
+HERE ORIGIN IS THE REMOTE  LOCATION 
+AND MAIN IS THE LOCATION OF YOU LOCAL REPO WHICH YOU WANT TO PUSH 
+
+
+
+
+
+
+
+WHEN WE GET THE FATAL ERROR LIKE  'origin  does not appear to be the git repository'
+ then in that case create a new repo and do this 
+ git remote add origin "paste the link of that remote new repo"
+ 
+ 
+ TO PUSH THE PROJECT FFROM LOCAL TO GIT 
+ git push origin main
+ to avoid writing this again and again we can use one as 
+ git push -u origin main
+ Now when ever we need to push we just simlpy write this command
+ git push 
+ 
+ 
+ 
+ 
+ 
+ Branching in git :
+ GIT BRANCHING : Git branching is a powerful feature that allows developers to work on different features, bug fixes, or experiments concurrently without affecting the main codebase.
+ 
+ Create a New Branch:
+git branch <branch_name> :This command creates a new branch but does not switch toit.
+ 
+TO SWITCH TO THE NEW BRANCH IMMEDIATELY ALONG WITH BRANCH CREATION USE THIS COMMAND:
+git checkout -b <branch_name>
+
+List All Branches: To list all branches use this command 
+git branch
+
+Switch to a Branch:
+git checkout <branch_name>
+
+Rename a Branch: To rename the existing branch: 
+git branch -m <old_branch_name> <new_branch_name>
+
+Delete a Branch: To delete the existing branch 
+git branch -D <branch_name>
+
+Merge Branches:
+To merge changes from one branch into another, you can use the following :
+1:# Switch to the branch where you want to merge changes
+git checkout <target_branch>
+
+2# Merge changes from the source branch
+git merge <source_branch>
+
+View Merged and Unmerged Branches:
+To see which branches have been merged into the current branch, you can use:
+git branch --merged
+
+
+To see which branches contain changes that have not been merged yet, you can use:
+git branch --no-merged
+
+Show Branch History:
+git log --oneline --graph --all
+
+
+
+
+UNDOING IN GIT:
+git reset filename 
+
+1>Undo the Last Commit (Local):
+If you've committed changes but want to undo the last commit (and keep the changes in your working directory), you can use:
+git reset HEAD^
+
+
+
+2>Undo the Last Commit (Local and Working Directory):
+To completely undo the last commit and discard the changes from your working directory, you can use:
+git reset --hard HEAD^
+
+
+
+3>Undo a Commit but Keep Changes in the Working Directory:If you want to undo the last commit but keep the changes in your working directory, you can use:
+
+git reset --soft HEAD^
+
+
+
+
+4>Undo Commits and Discard All Changes:
+To completely discard all changes and commits since the last pull or commit, you can use:
+
+git reset --hard origin/<branch_name>
+
+
+5>Undo a Merge:
+If you've merged a branch but want to undo the merge, you can use:
+git reset --hard ORIG_HEAD
+
+
+
+CLONING OG ANY GIT REPO:
+git clone -b :
+
+The git clone -b command is used to clone a specific branch of a Git repository.
+EXAMPLE:
+git clone -b Team_7 https://gitlab.happiestminds.com/root/INTPGC01.git 
+
+
+FORKING IN GIT :
+Forking in Git is a process where you create a personal copy of someone else's project or repository.
